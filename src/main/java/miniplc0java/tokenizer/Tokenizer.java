@@ -68,19 +68,19 @@ public class Tokenizer {
             token.append(it.nextChar());
         }
         Pos endPos=it.currentPos();
-        if(token.toString().equals("BEGIN")){
+        if(token.toString().equals("begin")){
             return new Token(TokenType.Begin,token.toString(),startPos,endPos);
         }
-        if(token.toString().equals("END")){
+        if(token.toString().equals("end")){
             return new Token(TokenType.End,token.toString(),startPos,endPos);
         }
-        if(token.toString().equals("VAR")){
+        if(token.toString().equals("var")){
             return new Token(TokenType.Var,token.toString(),startPos,endPos);
         }
-        if(token.toString().equals("CONST")){
+        if(token.toString().equals("const")){
             return new Token(TokenType.Const,token.toString(),startPos,endPos);
         }
-        if(token.toString().equals("PRINT")){
+        if(token.toString().equals("print")){
             return new Token(TokenType.Print,token.toString(),startPos,endPos);
         }
         return new Token(TokenType.Ident,token.toString(),startPos,endPos);
