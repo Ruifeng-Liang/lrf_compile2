@@ -270,7 +270,7 @@ public final class Analyser {
 
             // 加入符号表，请填写名字和当前位置（报错用）
             String name = nameToken.getValue().toString();
-            addSymbol(name, false, false, /* 当前位置 */ nameToken.getStartPos());
+            addSymbol(name, initialized, false, /* 当前位置 */ nameToken.getStartPos());
 
             // 如果没有初始化的话在栈里推入一个初始值
             if (!initialized) {
